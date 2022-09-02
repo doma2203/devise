@@ -1,7 +1,10 @@
 {{ define "main" }}
     <div class="pl-sm-4 ml-sm-5">
+    <h2>{{ .Title }}</h2>
         {{ .Content }}
+    <small class="text-muted">
+     Last updated: {{dateFormat "02 January 2006 15:04 MST" .Lastmod}}, {{.GitInfo.AbbreviatedHash}}
+    </small>
     </div>
-
     {{ template "_internal/disqus.html" . }}
 {{ end }}

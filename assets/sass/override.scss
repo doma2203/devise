@@ -18,7 +18,7 @@ $fa-font-path: "../webfonts";
 #content {
   width: 100%;
   max-width: 650px;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 140px);
 }
 
 #home-image {
@@ -73,6 +73,7 @@ h3, h4 {
 
 p {
   margin-bottom: 0.7rem;
+  text-align: justify;
 }
 
 header {

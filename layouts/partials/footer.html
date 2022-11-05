@@ -1,7 +1,7 @@
 <footer class="text-center pb-1">
     <small class="text-muted">
         {{ range .Pages }}
-        Last updated: {{dateFormat "02 January 2006 15:04" .Lastmod}}, {{.GitInfo.AbbreviatedHash}} 
+        Last updated: {{dateFormat "02 January 2006 15:04" .Lastmod}}, <a href="https://github.com/doma2203/doma2203.github.io/commit/{{.GitInfo.Hash}}" target="_blank">{{.GitInfo.AbbreviatedHash}}</a>
         {{ end }}
         <br>
         {{ if .Site.Copyright }}
@@ -10,7 +10,8 @@
             {{ "&copy; Copyright Year, Your Name" | safeHTML }}
         {{ end }}
         <br>
-        Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
-        and <a href="https://github.com/austingebauer/devise" target="_blank">Devise</a>
+        Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>,
+        <a href="https://github.com/austingebauer/devise" target="_blank">Devise</a>
+        and <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
     </small>
 </footer>

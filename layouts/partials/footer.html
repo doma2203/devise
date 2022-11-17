@@ -1,15 +1,9 @@
 <footer class="text-center pb-1">
     <small class="text-muted">
         {{ if hugo.IsProduction }}
-        {{ $hash := "0000" }} {{ $abrevhash := "0000" }}
-        {{ range .Pages }}
-        {{ if .GitInfo }}, {{ $hash := .GitInfo.Hash }} {{ $abrevhash := .GitInfo.AbbreviatedHash }}
-        {{ end }}
         Last updated: {{dateFormat "02 January 2006 15:04" .Lastmod}}
-        <a href="https://github.com/doma2203/doma2203.github.io/commit/{{ $hash }}" target="_blank">{{ $abrevhash }}</a>
         {{ end }}
         <br>
-        {{ end }}
         {{ if .Site.Copyright }}
             {{ .Site.Copyright | safeHTML }}
         {{ else }}

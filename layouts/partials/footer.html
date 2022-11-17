@@ -1,11 +1,8 @@
 <footer class="text-center pb-1">
     <small class="text-muted">
         {{ if hugo.IsProduction }}
-        {{ range .Pages }}
-        Last updated: {{dateFormat "02 January 2006 15:04" .Lastmod}}
-        {{ with .GitInfo }}
-        , <a href="https://github.com/doma2203/doma2203.github.io/commit/{{ .Hash }}" target="_blank">{{ .AbbreviatedHash }}</a>
-        {{ end }}
+        
+        Last updated: {{dateFormat "02 January 2006 15:04" .Lastmod}}{{ if isset .Pages .GitInfo }},<a href="https://github.com/doma2203/doma2203.github.io/commit/{{ .Hash }}" target="_blank">{{ .AbbreviatedHash }}</a>
         {{ end }}
         <br>
         {{ end }}
